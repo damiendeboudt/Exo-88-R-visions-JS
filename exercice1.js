@@ -22,7 +22,7 @@ document.getElementById("randombutton").addEventListener("click", function () {
 
 document.getElementById("affichertableau").addEventListener("click", function () {
     for (let key of table.keys()) {
-        document.getElementById("tableaufull").innerHTML += key + " - "  + "<br>"
+        document.getElementById("tableaufull").innerHTML = table.join()
     }
 })
 
@@ -31,6 +31,7 @@ document.getElementById("suppress").addEventListener("click", function () {
     document.getElementById("tableaufull").innerHTML = table.join()
 })
 
-//document.getElementById("suppressall").addEventListener("click", function (){
-  //  document.getElementById("tableaufull").innerHTML = table.
-//})
+document.getElementById("suppressall").addEventListener("click", function (){
+    table.splice(0, 1000000)
+    document.getElementById("tableaufull").innerHTML = table.join()
+})
