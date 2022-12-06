@@ -21,7 +21,9 @@ document.getElementById("randombutton").addEventListener("click", function () {
     })
 
 document.getElementById("affichertableau").addEventListener("click", function () {
-    document.getElementById("tableaufull").innerHTML = table.join()
+    for (let key of table.keys()) {
+        document.getElementById("tableaufull").innerHTML += key + " - "  + "<br>"
+    }
 })
 
 document.getElementById("suppress").addEventListener("click", function () {
